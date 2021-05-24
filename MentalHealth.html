@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+    <style>
+.center{   max-width: 175px;
+  margin: auto;
+  margin-top: 300px;}
+
+
+#loader{
+    width: 130px;
+    height: 130px;
+    border : black   15px groove;
+    border-radius: 50%;
+animation-name: loader;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+animation-timing-function: linear ;
+border-top: red 15px solid;
+animation-direction: normal;
+margin: auto;
+margin-top: 15% ;
+}
+*{margin: 0px;
+        padding: 0px;}
+    #sidebar{
+        background-color: black;
+        height: 100%;
+        width: 230px;
+        text-align: center;
+        color: white;
+        padding-top: 40px;
+
+        transition: all 0.3s;
+        position: fixed;
+        left: -230px;
+        top: 0px;
+    }
+    #sidebar ul a  {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        line-height: 60px;
+    }
+
+    #sidebar ul {
+        margin-top: 30px;
+    }
+    #sidebar ul li{
+        transition: all 0.4s;
+        border-bottom: rgb(17,16,16) 4px solid;
+    }
+    #sidebar ul li:hover{
+        background-color: rgb(17,15,15);
+        border-left: crimson 15px solid;
+    }
+
+    #open{
+
+
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        color: white;
+        font-size: 30px;
+        outline: none;
+    }
+
+    #open:hover{
+        background-color: rgb(24,22,22);
+    }
+
+@keyframes loader {
+
+from{ transform: rotate(0deg);}
+
+to{ transform: rotate(360deg);}
+
+}
+#container {display: none;}
+ 
+#slider{ width: 50%;
+height: 35%;   
+border: crimson 10px groove;
+background-image: url(MH5.gif); 
+background-size: 100% 100%  ;   
+transition: all 0.4s ;
+ margin: auto;}
+body{background-color: crimson;}
+
+#heading{ color: cyan; font-family: cursive; text-align: center; }
+
+
+
+body{
+        background-image: linear-gradient(to bottom right, red, yellow);
+        
+        }
+        
+        #title{font-family: 'Calibri'; font-size: 50px; margin-left: 600px;}
+        
+        .main_txt{ border: 2px wheat solid; text-align: center; height: 50%;}
+        
+        #main_pg_txt{font-size: 24px;}
+    </style>
+    <title>A Glimpse into society's most common mental ilnesses!</title>
+
+
+
+</head>
+<body>
+    
+<div id="container">
+
+    
+
+
+    <button onclick="showbar()" id="open">&#9776</button>
+    <div id="sidebar">
+        <button onclick="hide()">&#10006</button>
+       <h1>  Mental Health </h1>
+       <ul>
+           <li> <a href="Mental Health"> Home </a>      </li>
+           <li> <a href="Anxiety.html">Anxiety</a>    </li> 
+           <li> <a href="Bipolar.html">Bi-Polar Disorder</a>  </li> 
+           <li> <a href="Depression.html">Depression</a>     </li>
+           <li> <a href="Credits.html">Credits</a>     </li>
+       </ul>
+   
+    </div>   
+    <h1 id="heading">Mental Health</h1><br><br>
+    
+    
+    <div class="main_txt">
+    <p id="main_pg_txt"><b>For most of history, mental illnesses were not given much thought or attention as most of histories ailments were only physical. So, we did not have any depth in the subject, in fact most people even refuted its existence, calling people are just over sensitive. The only mental discrepancy with someone’s mental health people recognized was if someone was crazy. However, over the last century, as we gained greater understanding and recognition of mental illnesses, it has been realized that over 52% of people have dealt with some kind mental illness at some point in their lives. As of 2017 63% of young adults (aged from 18-25) have been experiencing some form of mental illness. Even though there are many methods of treating mental illness, people who have experienced (or experiencing) mental illnesses are not seeking professional health due to negative stigmas still present in our society. Some perceive mental illnesses to be not important, a sign of weakness, or unnatural. These cause people to shrug of long periods of negative emotions or irrational behavior as unimportant. Over 50% of people have hidden or concealed their mental issues from others because of stigma and discrimination. This leads them to bottle up their emotions which is toxic and leads to an unhealthy lifestyle. Without these issues being left unattended, their lives will be spun out of control, and cause even more issues. Although the importance and urgency of this problem is apparent, people continue to not take it seriously which leads to detrimental consequences. Because of the stigma associated with mental health issues, people who experience them lose the right to “lead a meaningful and productive life, in which they can participate and be included in society, be treated with respect and dignity, make choices about their life and health-care and access services” (Beyond Blue, 2015). Renewing our perspective and having an open mind toward Mental health will help us pave a path to a society without stigmas nor discriminations toward mental issues. We must work together to create a healing, and inclusive society.</b></p>
+    </div>
+    <div id="slider"></div>
+
+
+
+    </div>
+    <div id="loader"> </div>
+
+    
+
+    <script>
+
+function show()
+
+{
+document.getElementById("container").style.display="block"
+document.getElementById("loader").style.display="none"
+}
+setTimeout(show, 2690)
+
+function showbar()
+{document.getElementById("sidebar").style.left = "0px";}
+function hide()
+
+{document.getElementById("sidebar").style.left = "-230px";}
+
+var images = ["MH1.png", "MH2.png","MH6.gif","MH4.png"]
+
+var i = -1;
+function slider ()
+{
+if (i>4)
+{i = -1 ;}
+i++
+
+document.getElementById("slider").style.backgroundImage = "url("+ images[i]+")"
+
+}
+setInterval(slider, 6000)
+</script>
+
+
+</body>
+</html>
